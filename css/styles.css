@@ -1,0 +1,113 @@
+/* Variables */
+:root {
+    --color-gold: #bdae82;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --font1: 60px;
+    --font2: 40px;
+    --font3: 28px;
+    --font4: 24px;
+    --font5: 20px;
+    --font6: 18px;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'merriweatherbold';
+    src: url('../fonts/merriweather-bold-webfont.woff2') format('woff2'),
+         url('../fonts/merriweather-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'merriweatherregular';
+    src: url('../fonts/merriweather-regular-webfont.woff2') format('woff2'),
+         url('../fonts/merriweather-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'inter';
+    src: url('../fonts/inter-variablefont_slntwght-webfont.woff2') format('woff2'),
+         url('../fonts/inter-variablefont_slntwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+
+/* Common styles */
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-size: var(--font6);
+    font-family: 'inter';
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.title-wrap {
+    position: relative;
+    width: 50%;
+    margin: 0 auto 60px;
+    display: flex;
+    justify-content: center;
+}
+.title-wrap::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-gold);
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+.section-title {
+    position: relative;
+    display: inline-block;
+    color: var(--color-gold);
+    font-size: var(--font2);   
+    background-color: var(--color-black); 
+    padding: 0 20px;
+    font-family: 'merriweatherbold';
+}
+.button {
+    width: 220px;
+    font-size: var(--font5);
+    color: var(--color-black);
+    background-color: var(--color-gold);
+    padding: 14px 5px;
+    cursor: pointer;
+}
+.button:hover {
+    color: var(--color-white);
+}
+.button_portfolio {
+    background-color: var(--color-black);
+    border: 2px solid var(--color-gold);
+    color: var(--color-gold);
+}
