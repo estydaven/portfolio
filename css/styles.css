@@ -208,6 +208,7 @@ body {
     font-size: var(--font1);
     line-height: 120px;
     margin-bottom: 10px;
+    font-family: 'merriweather';
 }
 .hero__subtitle {
     line-height: 40px;
