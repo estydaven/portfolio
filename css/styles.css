@@ -219,7 +219,7 @@ body {
 .skills__inner {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 .skill {
     width: 320px;
@@ -290,7 +290,7 @@ body {
     row-gap: 25px;
 }
 .photo {
-    width: 450px;
+    width: calc(100% / 3 - 17px);
     height: 560px;
     object-fit: cover;
     transition: all .3s linear;
@@ -336,10 +336,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 .price-block {
-    width: 450px;
+    width: calc(100% / 3 - 20px);
     display: flex;
     flex-direction: column;
     align-items: center;
