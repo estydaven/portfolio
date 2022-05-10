@@ -10,6 +10,7 @@
     --font4: 24px;
     --font5: 20px;
     --font6: 18px;
+    --font7: 32px;
 }
 
 /* Fonts */
@@ -194,6 +195,9 @@ body {
     background: var(--color-dark-gold);
     transition: width ease-in-out .5s;
 }
+.languages {
+    font-size: var(--font5);
+}
 .languages__item_delimiter {
     margin: 0 8px;
 }
@@ -214,6 +218,29 @@ body {
     line-height: 40px;
     margin-bottom: 25px;
     font-size: var(--font5);
+}
+.burger {
+    display: none;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.burger__line {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-white);
+}
+.burger__line:nth-child(1) {
+    top: 14px;
+}
+.burger__line:nth-child(2) {
+    top: 26px;
+}
+.burger__line:nth-child(3) {
+    top: 38px;
 }
 
 /* Skills styles */
@@ -252,6 +279,7 @@ body {
 .skill__title {
     font-weight: 700;
     margin-bottom: 20px;
+    font-size: var(--font5);
 }
 .skill__text {
     line-height: 36px;
@@ -391,7 +419,7 @@ body {
     flex-direction: column;
 }
 .form__field {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);;
     border: 2px solid var(--color-gold);
     margin-bottom: 20px;
     padding: 15.5px 20px;
@@ -408,6 +436,13 @@ body {
 .form__field_textarea {
     height: 100px;
     resize: none;
+}
+.form__field:-webkit-autofill,
+.form__field:-webkit-autofill:hover,
+.form__field:-webkit-autofill:focus,
+.form__field:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--color-gold);
+  transition: background-color 0s ease-in-out 9000s;
 }
 
 /* Footer styles */
@@ -477,4 +512,142 @@ body {
 }
 .socials__link_pin {
     background-image: url('../images/svg/pinterest.svg');
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1200px) {
+    .photo {
+        height: 450px;
+    }
+}
+@media (max-width: 1038px) {
+    .header {
+        padding: 20px 0 140px 0;
+    }
+    .price__inner {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px 20px;
+    }
+    .price-block {
+        width: calc(100% / 2 - 20px);
+    }
+    .photo {
+        width: calc(100% / 2 - 17px);
+        height: 560px;
+    }
+    .portfolio__photos {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 934px) {
+    .portfolio__buttons {
+        max-width: 450px;
+        margin: 0 auto 60px;
+    }
+}
+@media (max-width: 860px) {
+    .hero {
+        max-height: 590px;
+    }
+    .header {
+        padding: 20px 0 100px 0;
+    }
+    .skill {
+        width: 300px;
+    }    
+    .skills__inner {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+    .hero {
+        padding: 0 60px;
+    }
+    .hero__wrapper {
+        padding-left: 0;
+    }
+    .nav {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+    .languages {
+        margin-right: 20px;
+    }
+    .hero__title {
+        font-size: var(--font7);
+        line-height: 64px;
+    }
+    .hero__subtitle {
+        font-size: var(--font5);
+        line-height: 24px;
+        margin-bottom: 60px;
+    }
+    .section {
+        padding-top: 80px;
+    }
+    .section-title {
+        font-size: var(--font7);
+    }
+    .title-wrap {
+        width: 56.2%;
+        margin: 0 auto 50px;
+    }
+    .skill {
+        padding-top: 80px;
+    }
+    .skill__text {
+        line-height: 21px;
+    }
+    .skills__inner {
+        gap: 76px 20px;
+    }
+    .portfolio__photos {
+        justify-content: center;
+    }
+    .photo {
+        width: 100%;
+        max-width: 450px;
+        height: 560px;
+    }
+    .player__cover {
+        height: 418px;
+        object-fit: cover;
+    }
+    .player__button {
+        width: 75px;
+        height: 75px;
+    }
+    .price-block {
+        width: 100%;
+        max-width: 420px;
+    }
+    .contact__inner {
+        margin: 0 auto;
+    }
+    .contact__title {
+        text-align: center;
+        font-size: var(--font7);
+    }
+    .button_contacts {
+        margin: 0 auto;
+    }
+    .contacts {
+        min-height: 700px;
+    }
+    .footer {
+        padding: 28px 0;
+    }
+    .footer__inner {
+        flex-direction: column;
+    }
+    .footer__block {
+        margin-bottom: 20px;
+    }
 }
