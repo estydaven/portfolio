@@ -588,6 +588,7 @@ body {
         font-size: var(--font5);
         line-height: 24px;
         margin-bottom: 60px;
+        max-width: 390px;
     }
     .section {
         padding-top: 80px;
@@ -649,5 +650,74 @@ body {
     }
     .footer__block {
         margin-bottom: 20px;
+    }
+}
+@media (max-width: 540px) {
+    .hero {
+        padding: 0 30px;
+        max-height: 500px;
+    }
+    .header {
+        padding: 20px 0 50px 0;
+    }
+    .hero__subtitle {
+        max-width: 300px;
+    }
+    .burger {
+        width: 35px;
+    }
+    .photo {
+        max-width: 400px;
+        height: 500px;
+    }
+    .price__inner {
+        gap: 20px;
+    }
+    .contacts {
+        background-position: -156px 0;
+    }
+}
+@media (max-width: 480px) {
+    .hero {
+        background-position: 15% 100%;
+    }
+    .section {
+        padding-top: 50px;
+    }
+    .contact__inner {
+        padding: 30px 20px 0 0;
+    }
+    .contacts {
+        min-height: 500px;
+    }
+}
+@media (max-width: 420px) {
+    .title-wrap {
+        width: 80%;
+    }
+    .portfolio__buttons {
+        margin: 0 auto 30px;
+    }
+    .photo {
+        max-width: 300px;
+        height: 400px;
+    }
+    .player__cover {
+        height: auto;
+    }
+    .price-block {
+        max-width: 300px;
+    }
+    .contact__inner {
+        padding: 30px 20px 0 20px;
+    }
+}
+@media (max-width: 360px) {
+    .hero {
+        background-position: 0% 100%;
+    }
+    .logo {
+        width: 40px;
+        height: 40px;
     }
 }
