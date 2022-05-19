@@ -13,16 +13,20 @@ menu.addEventListener('click', toggleMenu);
 
 // Change portfolio photos
 
-const portfolioBtns = document.querySelector('.portfolio__buttons');
 const portfolioImages = document.querySelectorAll('.photo');
+const portfolioBtn = document.querySelectorAll('.portfolio__button');
 
-function changeImage(e) {
-    if (e.target.classList.contains('portfolio__button')) {
-        portfolioImages.forEach((img, index) => img.src = `images/${e.target.dataset.season}/${index + 1}.jpg`);
+function changeImage(event) {
+    if (event.target.classList.contains('portfolio__button')) {
+        portfolioImages.forEach((img, index) => img.src = `images/${event.target.dataset.season}/${index + 1}.jpg`);
+        portfolioBtn.forEach((elem) => {
+            elem.classList.remove('portfolio__button_active');
+            event.target.classList.add('portfolio__button_active');
+        });
     }
 }
 
-portfolioBtns.addEventListener('click', changeImage);
+portfolioBtn.forEach((el) => el.addEventListener('click', changeImage));
 
 // Cashing portfolio images
 
