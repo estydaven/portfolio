@@ -196,6 +196,9 @@ body {
 .languages {
     font-size: var(--font5);
 }
+.languages__item {
+    cursor: pointer;
+}
 .languages__item_delimiter {
     margin: 0 8px;
 }
