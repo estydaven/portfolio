@@ -37,7 +37,9 @@ const i18Obj = {
       'price-description-3-span-5': 'Make up, visage, hairstyle',
       'order': 'Order shooting',
       'contact-me': 'Contact me',
-      'send-message': 'Send message'
+      'send-message': 'Send message',
+      'phone': 'Phone',
+      'message': 'Message'
     },
     'ru': {
       'skills': 'Навыки',
@@ -77,7 +79,9 @@ const i18Obj = {
       'price-description-3-span-5': 'Макияж, визаж, прическа',
       'order': 'Заказать съемку',
       'contact-me': 'Свяжитесь со мной',
-      'send-message': 'Отправить'
+      'send-message': 'Отправить',
+      'phone': 'Телефон',
+      'message': 'Сообщение'
     }
   }
 
@@ -130,30 +134,28 @@ preloadImages();
 const enLang = document.querySelector('.languages__item_en');
 const ruLang = document.querySelector('.languages__item_ru');
 
-function getTranslateEn(event) {
+function getTranslate(lang) {
     const translateElement = document.querySelectorAll('[data-i18]');
-    translateElement.forEach((el) => {
-        
-    });
+    document.documentElement.lang = `${lang}`;
 
     if (event.target.classList.contains('languages__item')) {        
-        ruLang.classList.remove('languages__item_active');
-        enLang.classList.add('languages__item_active');
+            enLang.classList.toggle('languages__item_active');
+            ruLang.classList.toggle('languages__item_active');
     }
-    
-}
 
-function getTranslateRu(event) {
-    const translateElement = document.querySelectorAll('[data-i18]');
     translateElement.forEach((el) => {
-        
-    });
+        el.textContent = i18Obj[lang][el.dataset.i18];
 
-    if (event.target.classList.contains('languages__item')) {
-        ruLang.classList.add('languages__item_active');
-        enLang.classList.remove('languages__item_active');
-    }    
+        if (el.placeholder) {
+            el.placeholder = i18Obj[lang][el.dataset.i18];
+            el.textContent = '';
+        }
+    });
 }
 
-enLang.addEventListener('click', getTranslateEn);
-ruLang.addEventListener('click', getTranslateRu);
+enLang.addEventListener('click', (event) => {
+    getTranslate('en', event);
+});
+ruLang.addEventListener('click', (event) => {
+    getTranslate('ru', event);
+});

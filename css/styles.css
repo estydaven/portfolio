@@ -14,21 +14,33 @@
 }
 
 /* Fonts */
+/* inter-regular - latin_cyrillic */
 @font-face {
-    font-family: 'merriweather';
-    src: url('../fonts/merriweather-bold-webfont.woff2') format('woff2'),
-         url('../fonts/merriweather-bold-webfont.woff') format('woff');
-    font-weight: normal;
+    font-family: 'inter';
     font-style: normal;
     font-display: swap;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/inter-v11-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/inter-v11-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 @font-face {
     font-family: 'inter';
-    src: url('../fonts/inter-variablefont_slntwght-webfont.woff2') format('woff2'),
-         url('../fonts/inter-variablefont_slntwght-webfont.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
     font-display: swap;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/inter-v11-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/inter-v11-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+    font-family: 'merriweather';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/merriweather-v30-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/merriweather-v30-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* Reset */
@@ -195,6 +207,7 @@ body {
 }
 .languages {
     font-size: var(--font5);
+    text-transform: uppercase;
 }
 .languages__item {
     cursor: pointer;
@@ -264,6 +277,7 @@ body {
 .skills__inner {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 20px;
 }
 .skill {
@@ -341,27 +355,6 @@ body {
 }
 .portfolio__button:hover::before {
     opacity: 1;
-}
-.portfolio__button:after {
-    position: absolute;
-    display: block;
-    content: "";
-    width: 0;
-    right: 0;
-    bottom: 0;
-    height: 2px;
-    bottom: -3px;
-    background: var(--color-dark-gold);
-    transition: width ease-in-out .5s;
-    z-index: 1;
-}
-.portfolio__button:hover::after {
-    width: 40%;
-    transform: translate(-50%);
-    left: 50%;
-    bottom: 10px;
-    background: var(--color-dark-gold);
-    transition: width ease-in-out .5s;
 }
 .portfolio__button_active {
     color: var(--color-black);
