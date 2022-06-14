@@ -581,6 +581,9 @@ body {
 }
 
 /* Light theme styles */
+.light .logo {
+    background-image: url('../images/svg/logo-dark.svg');
+}
 .light .title-wrap::before {
     background-color: var(--color-white);
 }
