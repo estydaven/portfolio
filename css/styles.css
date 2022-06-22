@@ -531,7 +531,7 @@ body {
     position: absolute;
     display: flex;
     justify-content: space-between;
-    width: 66.3%;
+    width: calc(80% - 187px);
     left: 160px;
     bottom: 5px;
     font-size: 16px;
@@ -778,6 +778,17 @@ body {
         max-width: 450px;
         margin: 0 auto 60px;
     }
+    .player__controls {
+        padding: 0 5px;
+    }
+    .player__button {
+        width: 30px;
+        height: 30px;
+    }
+    .timers {
+        width: calc(80% - 166px);
+        left: 131px;
+    }
 }
 @media (max-width: 860px) {
     .hero {
@@ -874,7 +885,7 @@ body {
         height: 560px;
     }
     .player__cover {
-        height: 418px;
+        height: 434px;
         object-fit: cover;
     }
     .player__btn {
@@ -907,6 +918,44 @@ body {
     .footer__block {
         margin-bottom: 20px;
     }
+    .timers {
+        position: absolute;
+        width: 96%;
+        left: 13px;
+        bottom: 28px;
+    }
+    .progress {
+        position: absolute;
+        width: 96%;
+        top: 10px;
+    }
+    .player__buttons {
+        position: absolute;
+        left: 5px;
+        top: 55px;
+    }
+    .player__button {
+        width: 20px;
+        height: 20px;
+    }
+    .volume-icon {
+        position: absolute;
+        right: 139px;
+        top: 54px;
+    }
+    .volume {
+        position: absolute;
+        right: 13px;
+        top: 59px;
+    }
+}
+@media (max-width: 650px) {
+    .volume-icon {
+        right: 165px;
+    }
+    .volume {
+        width: calc(30% - 40px);
+    }
 }
 @media (max-width: 540px) {
     .hero {
@@ -932,6 +981,12 @@ body {
     .contacts {
         background-position: -156px 0;
     }
+    .volume-icon {
+        right: 140px;
+    }
+    .timers {
+        left: 9px;
+    }
 }
 @media (max-width: 480px) {
     .hero {
@@ -952,6 +1007,9 @@ body {
     .nav {
         width: 100%;
         padding: 100px 0 0 50px;
+    }
+    .volume {
+        width: 120px;
     }
 }
 @media (max-width: 420px) {
@@ -979,6 +1037,40 @@ body {
     }
     .languages {
         margin-right: 16px;
+    }
+    .player__controls {
+        height: 40px;
+    }
+    .player__btn {
+        width: 40px;
+        height: 40px;
+    }
+    .progress {
+        width: 100%;
+        top: -12px;
+        height: 16px;
+    }
+    .timers {
+        left: 5px;
+        bottom: 16px;
+        font-size: 13px;
+    }
+    .player__buttons {
+        left: 50px;
+        top: 14px;
+    }
+    .player__button {
+        width: 20px;
+        height: 20px;
+    }
+    .volume {
+        width: 100px;
+        right: 52px;
+        top: 18px;
+    }
+    .volume-icon {
+        right: 165px;
+        top: 13px;
     }
 }
 @media (max-width: 360px) {
