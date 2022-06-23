@@ -300,14 +300,6 @@ function skip() {
     video.currentTime += parseFloat(this.dataset.skip);
 }
 
-// function pressKey(e) {
-//     video.focus();
-//     if (e.keyCode === 37 || e.keyCode === 39) {
-//         video.currentTime += parseFloat(this.dataset.skip);
-//     }
-//     console.log(e.keyCode);
-// }
-
 function handleProgress() {
     const percent = (video.currentTime / video.duration) * 100;
     progress.style.background = `linear-gradient(to right, #BDAE82 0%, #BDAE82 ${percent}%, #FFFFFF ${percent}%, #FFFFFF 100%)`;
@@ -341,3 +333,16 @@ volumeBar.addEventListener('pointerdown', volumeBarVolume);
 volumeBar.addEventListener('change', volumeBarVolumeChange);
 volumeBar.addEventListener('mousemove', volumeBarVolumeChange);
 volumeBar.addEventListener('touchmove', volumeBarVolumeChange);
+
+// Up button scroll
+const upButton = document.querySelector('.up');
+
+function scrollUp() {
+    if (window.pageYOffset > 500) {
+        upButton.style.display = 'flex';
+    } else {
+        upButton.style.display = 'none';
+    }
+}
+
+window.addEventListener('scroll', scrollUp);

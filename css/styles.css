@@ -69,6 +69,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
+    position: relative;
     width: 100%;
     overflow-x: hidden;
     background-color: var(--color-black);
@@ -745,6 +746,30 @@ body {
 }
 .light .theme-image {
     background-image: url(../images/svg/moon.svg);
+}
+
+/* Up button styles */
+.up {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--color-dark-gold);
+    transition: all .3s linear;
+}
+.up:hover {
+    transform: scale(.9);
+    opacity: .8;
+}
+.up__icon {
+    fill: #b3994b;
+    width: 30px;
+    height: 30px;
 }
 
 /* MEDIA QUERIES */
