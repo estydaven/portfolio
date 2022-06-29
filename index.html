@@ -37,7 +37,7 @@
             <div class="hero__wrapper">
                 <h1 class="hero__title" data-i18="hero-title">Alexa Rise</h1>
                 <p class="hero__subtitle" data-i18="hero-text">Save sincere emotions, romantic feelings and happy moments of life together with professional photographer Alexa Rise</p>
-                <button class="button" type="button"><span class="button__text" data-i18="hire">Hire me</span></button>
+                <button class="button button_hire" type="button"><span class="button__text" data-i18="hire">Hire me</span></button>
             </div>
         </div>
     </section>
@@ -126,7 +126,7 @@
                             <span class="price-block__text" data-i18="price-description-1-span-4">Readiness 2-3 weeks</span>
                             <span class="price-block__text" data-i18="price-description-1-span-5">Make up, visage</span>
                         </p>
-                        <button class="button button_light" type="button"><span class="button__text" data-i18="order">Order shooting</span></button>
+                        <button class="button button_price button_light" type="button" data-price="500"><span class="button__text" data-i18="order">Order shooting</span></button>
                     </div>
                     <div class="price-block">
                         <h3 class="price-block__title" data-i18="">Premium</h3>
@@ -138,7 +138,7 @@
                             <span class="price-block__text" data-i18="price-description-2-span-4">Readiness 1-2 weeks</span>
                             <span class="price-block__text" data-i18="price-description-2-span-5">Make up, visage</span>
                         </p>
-                        <button class="button button_light" type="button"><span class="button__text" data-i18="order">Order shooting</span></button>
+                        <button class="button button_price button_light" type="button" data-price="700"><span class="button__text" data-i18="order">Order shooting</span></button>
                     </div>
                     <div class="price-block">
                         <h3 class="price-block__title" data-i18="">Gold</h3>
@@ -150,7 +150,7 @@
                             <span class="price-block__text" data-i18="price-description-3-span-4">Readiness 1 week</span>
                             <span class="price-block__text" data-i18="price-description-3-span-5">Make up, visage, hairstyle</span>
                         </p>
-                        <button class="button button_light" type="button"><span class="button__text" data-i18="order">Order shooting</span></button>
+                        <button class="button button_price button_light" type="button" data-price="1000"><span class="button__text" data-i18="order">Order shooting</span></button>
                     </div>
                 </div>
             </section>
@@ -188,8 +188,37 @@
         </div>
     </footer>
     <a href="#header" class="up">
-        <svg class="up__icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 115.4 122.88"><title>up-arrow</title><path d="M24.94,67.88A14.66,14.66,0,0,1,4.38,47L47.83,4.21a14.66,14.66,0,0,1,20.56,0L111,46.15A14.66,14.66,0,0,1,90.46,67.06l-18-17.69-.29,59.17c-.1,19.28-29.42,19-29.33-.25L43.14,50,24.94,67.88Z"/></svg>
+        <svg class="up__icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 115.4 122.88"><title>up-arrow</title>
+            <path d="M24.94,67.88A14.66,14.66,0,0,1,4.38,47L47.83,4.21a14.66,14.66,0,0,1,20.56,0L111,46.15A14.66,14.66,0,0,1,90.46,67.06l-18-17.69-.29,59.17c-.1,19.28-29.42,19-29.33-.25L43.14,50,24.94,67.88Z"/>
+        </svg>
     </a>
+    <div class="popup popup_hire">
+        <div class="popup__overlay"></div>
+        <div class="popup__inner">
+            <div class="popup__close popup__close_hire"></div>
+            <h2 class="contact__title" data-i18="contact-me">Contact me</h2>
+            <form class="form" method="post">                    
+                <input type="email" class="form__field" placeholder="E-mail">
+                <input type="tel" class="form__field" placeholder="Phone" data-i18="phone">
+                <textarea class="form__field form__field_textarea" placeholder="Message" data-i18="message"></textarea>
+                <button class="button button_contacts" type="submit"><span class="button__text" data-i18="send-message">Send message</span></button>
+            </form>
+        </div>
+    </div>
+    <div class="popup popup_price">
+        <div class="popup__overlay"></div>
+        <div class="popup__inner">
+            <div class="popup__close popup__close_price"></div>
+            <h2 class="contact__title contact__title_popup" data-i18="order">Order shooting</h2>
+            <p class="popup__title"><span class="popup__price">500</span> <span class="popup__current">$</span></p>
+            <form class="form" method="post">                    
+                <input type="email" class="form__field" placeholder="E-mail">
+                <input type="tel" class="form__field" placeholder="Phone" data-i18="phone">
+                <textarea class="form__field form__field_textarea" placeholder="Message" data-i18="message"></textarea>
+                <button class="button button_contacts" type="submit"><span class="button__text" data-i18="send-message">Send message</span></button>
+            </form>
+        </div>
+    </div>
     <script src="js/main.js"></script>    
 </body>
 </html>
