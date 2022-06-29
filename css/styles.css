@@ -1111,6 +1111,12 @@ body {
     }
     .up {
         right: 17px;
+        width: 35px;
+        height: 35px;
+    }
+    .up__icon {
+        width: 21px;
+        height: 21px;
     }
 }
 @media (max-width: 420px) {
